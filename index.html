@@ -2,16 +2,27 @@
 <html>
   <head>
     <base target="_top">
+    <?!= HtmlService.createHtmlOutputFromFile('css').getContent(); ?>
   </head>
   <body>
+   <div id="app">
     <h1>初めてのWEBページ</h1>
     
-    <ol>
-     <li>富</li>
-     <li>名声</li>
-     <li>力</li>
-　　 </ol>
+    {{ message }}
+    <button @click="changeMessage">テキスト変更！</button>
+   
+    <div class="container-fluid">
+     <div class="row">
+     <div class="col-sm-2" style="background-color:red;">Red</div>
+     <div class="col-sm-8" style="background-color:blue;">Blue</div>
+     <div class="col-sm-2" style="background-color:yellow;">Yellow</div>
+    </div>
+   </div>
     
+     <h2 id="h2-orange">連載目次：超初心者向けGASでBotを作りながら基礎を学ぶ</h2>
+     
+     </div>
+     <?!= HtmlService.createHtmlOutputFromFile('js').getContent(); ?>
   </body>
 </html>
 
